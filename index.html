@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KaytoLabs | Portfólio de Samuel Kayto Takiuchi</title>
+  <meta name="description" content="KaytoLabs — portfólio front-end de Samuel Kayto Takiuchi, estudante de Engenharia de Software na FIAP. Projetos, interesses, trilha sonora e experiência em TI.">
+  <meta name="author" content="Samuel Kayto Takiuchi">
+  <meta name="theme-color" content="#101014">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23FF4655'/%3E%3Cpath d='M4 3h2v4l4-4h2.5L8 8l4.5 5H10L6 9v4H4z' fill='%23101014'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Press+Start+2P&family=Rajdhani:wght@500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Marca a página como "com JavaScript" antes da renderização (evita piscar nas animações) -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<!--
+  ============================================================
+  GUIA RÁPIDO — ONDE COLOCAR SUAS IMAGENS E LINKS
+  ------------------------------------------------------------
+  Foto pessoal (hero + Sobre mim):
+     assets/img/foto-kayto.jpg   (se o arquivo não existir, aparece
+     apenas um avatar pixel genérico — nenhuma foto é inventada)
+  Capturas reais do OceanGuard (substituir a ilustração conceitual):
+     assets/img/oceanguard-captura.png  → troque o src no Projeto 01
+  Links dos projetos: procure por "LINK_PROJETO" nos modais.
+  Playlist do Spotify: procure por "playlist-slot".
+  ============================================================
+-->
+<body id="topo">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ================= CABEÇALHO ================= -->
+  <header class="site-header" id="site-header">
+    <div class="topbar" aria-hidden="true">
+      <div class="container topbar__inner">
+        <span class="status"><i class="status__dot"></i>SYSTEM STATUS: ONLINE</span>
+        <span class="topbar__clock">LOCAL TIME <span id="clock">--:--</span></span>
+        <span class="hp">
+          <span class="px-icon hp__heart" data-icon="heart"></span>
+          <span class="hp__bar"><i></i></span>
+        </span>
+      </div>
+    </div>
+
+    <div class="navbar">
+      <div class="container navbar__inner">
+        <a class="brand" href="#inicio" aria-label="KaytoLabs — voltar ao início">
+          <span class="brand__name">KAYTO<span>LABS</span></span>
+          <span class="brand__tag">CREATIVE MIND. DEVELOPER VISION.</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu de navegação">
+          <span class="nav-toggle__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>MENU</span>
+        </button>
+
+        <nav class="nav" id="menu" aria-label="Navegação principal">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#inicio">Início</a></li>
+            <li><a class="nav__link" href="#sobre">Sobre mim</a></li>
+            <li><a class="nav__link" href="#projetos">Projetos</a></li>
+            <li><a class="nav__link" href="#interesses">Interesses</a></li>
+            <li><a class="nav__link" href="#musica">Música</a></li>
+            <li><a class="nav__link" href="#experiencia">Experiência</a></li>
+            <li><a class="nav__link" href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="scroll-progress" aria-hidden="true"><i id="scroll-bar"></i></div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title" tabindex="-1">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="hero__tags reveal">
+            <span class="chip chip--red">PORTFOLIO 2026</span>
+            <span class="chip">SOFTWARE ENGINEERING STUDENT</span>
+            <span class="chip">PLAYER PROFILE: KAYTO</span>
+          </div>
+
+          <h1 class="hero__title reveal" id="hero-title" style="--d:80ms">
+            Olá, eu sou <span class="name">Samuel Kayto Takiuchi.</span>
+          </h1>
+
+          <p class="hero__brand reveal" style="--d:160ms" data-typed="KAYTOLABS — ONDE TECNOLOGIA E CRIATIVIDADE SE ENCONTRAM.">
+            <span class="sr-only">KAYTOLABS — ONDE TECNOLOGIA E CRIATIVIDADE SE ENCONTRAM.</span>
+            <span class="typed" aria-hidden="true">KAYTOLABS — ONDE TECNOLOGIA E CRIATIVIDADE SE ENCONTRAM.</span><span class="caret" aria-hidden="true"></span>
+          </p>
+
+          <p class="hero__text reveal" style="--d:240ms">
+            Tenho 19 anos e sou estudante de Engenharia de Software na FIAP. Gosto de explorar novas tecnologias, desenvolver ideias, criar soluções e transformar conceitos em projetos. Este portfólio reúne um pouco do que venho construindo, das minhas experiências e das coisas que fazem parte da minha personalidade.
+          </p>
+
+          <div class="hero__cta reveal" style="--d:320ms">
+            <a class="btn" href="#projetos">EXPLORAR PROJETOS</a>
+            <a class="btn btn--ghost" href="#sobre">CONHECER KAYTO</a>
+          </div>
+        </div>
+
+        <!-- Composição gráfica (HUD / cidade pixel) -->
+        <figure class="hero__scene reveal" style="--d:200ms">
+          <div class="pxwin">
+            <div class="pxwin__bar">
+              <span>PLAYER_01.EXE</span>
+              <span class="pxwin__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            </div>
+            <div class="scene" role="img" aria-label="Ilustração em pixel art de uma cidade ao pôr do sol com uma mira estilizada ao redor do cartão do jogador">
+              <div class="scene__sun" aria-hidden="true"></div>
+
+              <svg class="scene__skyline" viewBox="0 0 400 150" preserveAspectRatio="xMidYMax meet" shape-rendering="crispEdges" aria-hidden="true">
+                <defs>
+                  <pattern id="win" width="10" height="12" patternUnits="userSpaceOnUse"><rect x="3" y="3" width="4" height="5" fill="#FFC857"/></pattern>
+                  <pattern id="win2" width="10" height="12" patternUnits="userSpaceOnUse"><rect x="3" y="3" width="4" height="5" fill="#FF7138"/></pattern>
+                </defs>
+                <g fill="#14141b" stroke="#FF4655" stroke-width="2">
+                  <rect x="4" y="70" width="44" height="80"/>
+                  <rect x="52" y="30" width="36" height="120"/>
+                  <rect x="92" y="85" width="50" height="65"/>
+                  <rect x="146" y="50" width="40" height="100"/>
+                  <rect x="190" y="95" width="46" height="55"/>
+                  <rect x="240" y="20" width="40" height="130"/>
+                  <rect x="284" y="75" width="48" height="75"/>
+                  <rect x="336" y="45" width="34" height="105"/>
+                  <rect x="372" y="90" width="28" height="60"/>
+                </g>
+                <g fill="#FF4655"><rect x="68" y="10" width="4" height="20"/><rect x="258" y="4" width="4" height="16"/><rect x="350" y="30" width="4" height="15"/></g>
+                <g>
+                  <rect class="lights" x="8" y="76" width="36" height="68" fill="url(#win)"/>
+                  <rect class="lights lights--b" x="56" y="36" width="28" height="108" fill="url(#win2)"/>
+                  <rect class="lights" x="96" y="91" width="42" height="53" fill="url(#win)"/>
+                  <rect class="lights lights--b" x="150" y="56" width="32" height="88" fill="url(#win)"/>
+                  <rect class="lights" x="194" y="101" width="38" height="43" fill="url(#win2)"/>
+                  <rect class="lights lights--b" x="244" y="26" width="32" height="118" fill="url(#win)"/>
+                  <rect class="lights" x="288" y="81" width="40" height="63" fill="url(#win2)"/>
+                  <rect class="lights lights--b" x="340" y="51" width="26" height="93" fill="url(#win)"/>
+                  <rect class="lights" x="375" y="96" width="22" height="48" fill="url(#win)"/>
+                </g>
+                <rect x="0" y="146" width="400" height="4" fill="#FF4655"/>
+              </svg>
+
+              <div class="hero__hud" aria-hidden="true">DEVELOPER MODE<br>SYSTEM ONLINE</div>
+
+              <div class="scene__player">
+                <div class="player-card">
+                  <div class="player-card__photo">
+                    <span class="px-icon" data-icon="player" aria-hidden="true"></span>
+                    <!-- Foto pessoal: coloque o arquivo em assets/img/foto-kayto.jpg -->
+                    <img src="assets/img/foto-kayto.jpg" alt="Samuel Kayto Takiuchi tirando uma selfie no espelho, de boné e camiseta clara" onerror="this.remove()">
+                  </div>
+                  <div class="player-card__label">PLAYER 1<br>KAYTO</div>
+                </div>
+              </div>
+
+              <div class="crosshair" aria-hidden="true">
+                <span class="crosshair__ring"></span><span class="crosshair__ring crosshair__ring--in"></span>
+                <i></i><i></i><i></i><i></i>
+              </div>
+            </div>
+          </div>
+        </figure>
+      </div>
+
+      <a class="scroll-hint" href="#sobre" aria-label="Rolar para a próxima seção">
+        <span class="scroll-hint__mouse" aria-hidden="true"><i></i></span>
+        <span>SCROLL</span>
+      </a>
+    </section>
+
+    <!-- ================= SOBRE MIM ================= -->
+    <section class="section section--alt" id="sobre" aria-labelledby="sobre-title" tabindex="-1">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-head__tag">PLAYER PROFILE / PERSONAL DATA</p>
+          <h2 class="section-title" id="sobre-title">Quem está por trás do <span class="hl">KaytoLabs?</span></h2>
+        </header>
+
+        <div class="about">
+          <article class="pxwin reveal" aria-label="Ficha do jogador">
+            <div class="pxwin__bar">
+              <span>FICHA_DO_JOGADOR.SAV</span>
+              <span class="pxwin__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            </div>
+            <div class="pxwin__body">
+              <figure class="sheet__portrait">
+                <span class="px-icon" data-icon="player" aria-hidden="true"></span>
+                <!-- Foto pessoal: assets/img/foto-sobre.jpg -->
+                <img src="assets/img/foto-sobre.jpg" alt="Samuel Kayto Takiuchi de óculos escuros e jaqueta, em um ambiente com iluminação vermelha" loading="lazy" onerror="this.remove()">
+              </figure>
+              <p class="sheet__name">Samuel Kayto Takiuchi</p>
+              <p class="sheet__brand">// KAYTOLABS</p>
+              <dl class="stats">
+                <div class="stats__row"><dt>Idade</dt><dd>19 anos</dd></div>
+                <div class="stats__row"><dt>Formação</dt><dd>Engenharia de Software</dd></div>
+                <div class="stats__row"><dt>Instituição</dt><dd>FIAP</dd></div>
+                <div class="stats__row"><dt>Interesse</dt><dd>Tecnologia e Front-End</dd></div>
+                <div class="stats__row"><dt>Marca pessoal</dt><dd>KaytoLabs</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <div class="about__text reveal" style="--d:120ms">
+            <p>Sou Samuel Kayto Takiuchi, estudante de Engenharia de Software na FIAP e alguém que gosta de aprender, explorar novas possibilidades e transformar ideias em projetos. Tenho interesse por tecnologia, jogos, criatividade e desenvolvimento de soluções que possam facilitar o dia a dia das pessoas.</p>
+            <p>Fora do ambiente acadêmico, gosto de aproveitar meu tempo com amigos e familiares, conhecer lugares, ouvir música, jogar e aproveitar os momentos simples da rotina. Acredito que a combinação entre curiosidade, criatividade e vontade de aprender faz parte da minha evolução pessoal e profissional.</p>
+
+            <ul class="attrs" aria-label="Atributos pessoais">
+              <li class="attr"><span class="attr__no">01</span><p class="attr__name">Criatividade</p><span class="attr__meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></li>
+              <li class="attr"><span class="attr__no">02</span><p class="attr__name">Curiosidade</p><span class="attr__meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></li>
+              <li class="attr"><span class="attr__no">03</span><p class="attr__name">Tecnologia</p><span class="attr__meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></li>
+              <li class="attr"><span class="attr__no">04</span><p class="attr__name">Trabalho em equipe</p><span class="attr__meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></li>
+              <li class="attr"><span class="attr__no">05</span><p class="attr__name">Aprendizado contínuo</p><span class="attr__meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJETOS ================= -->
+    <section class="section" id="projetos" aria-labelledby="projetos-title" tabindex="-1">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-head__tag">IDEAS INTO SOLUTIONS</p>
+          <h2 class="section-title" id="projetos-title">Projetos em <span class="hl">desenvolvimento</span></h2>
+          <p class="section-lead">PROJECT DATABASE — duas propostas que nasceram da vontade de transformar ideias em soluções.</p>
+        </header>
+
+        <div class="projects">
+
+          <!-- PROJETO 01 — OCEANGUARD -->
+          <article class="project reveal" aria-labelledby="p1-title">
+            <figure class="project__media">
+              <!-- Para usar capturas reais, troque o src por assets/img/oceanguard-captura.png -->
+              <img src="assets/img/oceanguard-conceito.svg" width="640" height="400" alt="Ilustração conceitual de monitoramento oceânico: satélite, sensores e uma área destacada no mar com possível ocorrência">
+              <figcaption class="project__caption">ILUSTRAÇÃO CONCEITUAL — NÃO É CAPTURA DE TELA REAL</figcaption>
+            </figure>
+            <div class="project__body">
+              <p class="project__index">PROJECT 01 / 02</p>
+              <div class="chip-row"><span class="chip chip--red">ENVIRONMENTAL TECHNOLOGY</span></div>
+              <h3 class="project__title" id="p1-title">OceanGuard <small>— Inteligência Ambiental para os Oceanos</small></h3>
+              <p class="project__summary">Projeto voltado ao monitoramento ambiental dos oceanos, com foco na identificação e análise de possíveis manchas de óleo na superfície do mar, a partir de informações de satélites, sensores locais e análise de dados.</p>
+
+              <div class="details" id="p1-details">
+                <div>
+                  <ul class="details__list">
+                    <li>Identificação de possíveis manchas de óleo.</li>
+                    <li>Monitoramento ambiental.</li>
+                    <li>Análise e organização de dados.</li>
+                    <li>Integração de diferentes fontes de informação.</li>
+                    <li>Apoio à preservação dos oceanos.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="project__actions">
+                <button class="btn" type="button" data-modal-open="modal-oceanguard">CONHECER O PROJETO</button>
+                <button class="btn btn--ghost" type="button" data-toggle-details="p1-details" aria-expanded="false" aria-controls="p1-details">VER DETALHES</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 02 — SMARTSENSECAM -->
+          <article class="project project--flip reveal" aria-labelledby="p2-title">
+            <figure class="project__media">
+              <div class="cam-mock">
+                <div class="phone" id="cam-phone" data-mode="paisagem">
+                  <div class="phone__screen"></div>
+                  <div class="phone__subject" aria-hidden="true"><span class="px-icon" id="cam-subject" data-icon="pin"></span></div>
+                  <div class="phone__focus" aria-hidden="true"></div>
+                  <div class="phone__tag" id="cam-tag">CENA DETECTADA: PAISAGEM</div>
+                  <div class="phone__info" id="cam-info"><b>Exemplo da proposta:</b> exposição equilibrada entre céu e solo; foco no horizonte.</div>
+                </div>
+                <div class="cam-modes" role="group" aria-label="Experimente os modos de cena do mockup">
+                  <button type="button" data-cam="paisagem" aria-pressed="true">PAISAGEM</button>
+                  <button type="button" data-cam="animal" aria-pressed="false">ANIMAL</button>
+                  <button type="button" data-cam="objeto" aria-pressed="false">OBJETO</button>
+                  <button type="button" data-cam="noite" aria-pressed="false">NOITE</button>
+                </div>
+              </div>
+              <figcaption class="project__caption">MOCKUP CONCEITUAL — REPRESENTA A PROPOSTA, NÃO É O APP REAL</figcaption>
+            </figure>
+            <div class="project__body">
+              <p class="project__index">PROJECT 02 / 02</p>
+              <div class="chip-row"><span class="chip chip--red">AI / MOBILE EXPERIENCE</span></div>
+              <h3 class="project__title" id="p2-title">SmartSenseCam <small>— Inteligência Artificial para Fotografia Inteligente</small></h3>
+              <p class="project__summary">Proposta de inteligência artificial integrada à câmera dos celulares da Jovi, criada para tornar a experiência de fotografar mais simples, intuitiva e inteligente. Teste o mockup ao lado e veja como a proposta reagiria a cada tipo de cena.</p>
+
+              <div class="details" id="p2-details">
+                <div>
+                  <ul class="details__list">
+                    <li>Reconhecimento inteligente de cenas.</li>
+                    <li>Identificação de paisagens, animais e objetos.</li>
+                    <li>Ajustes automáticos de imagem.</li>
+                    <li>Adaptação a ambientes com pouca luz.</li>
+                    <li>Experiência de câmera mais simples.</li>
+                    <li>Recursos de inteligência artificial integrados à experiência do celular.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="project__actions">
+                <button class="btn" type="button" data-modal-open="modal-smartsensecam">EXPLORAR SMARTSENSECAM</button>
+                <button class="btn btn--ghost" type="button" data-toggle-details="p2-details" aria-expanded="false" aria-controls="p2-details">VER FUNCIONALIDADES</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INTERESSES ================= -->
+    <section class="section section--alt" id="interesses" aria-labelledby="interesses-title" tabindex="-1">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-head__tag">LIFE BEYOND THE SCREEN</p>
+          <h2 class="section-title" id="interesses-title">Fora do código, existe o <span class="hl">Kayto</span></h2>
+        </header>
+
+        <div class="life">
+          <article class="life-card reveal">
+            <div class="life-card__art life-card__art--photo art--a">
+              <img src="assets/img/terere.jpg" alt="Copo de tereré com gelo, erva-mate e canudo sobre uma mesa de madeira" loading="lazy" onerror="this.remove()">
+              <span class="px-icon" data-icon="cup" aria-hidden="true"></span>
+            </div>
+            <div class="life-card__body">
+              <span class="chip">SIDE QUEST 01</span>
+              <h3 class="life-card__title">Tereré bem gelado</h3>
+              <div class="life-card__desc" id="life-1"><p>Uma das coisas que gosto de aproveitar é um bom tereré bem gelado. Seja para relaxar, conversar ou simplesmente curtir o momento, o tereré combina com uma resenha tranquila e com a companhia das pessoas certas.</p></div>
+              <button class="life-card__more" type="button" aria-expanded="false" aria-controls="life-1">+ LER MAIS</button>
+            </div>
+          </article>
+
+          <article class="life-card reveal" style="--d:80ms">
+            <div class="life-card__art life-card__art--photo art--b">
+              <img src="assets/img/festa-universitaria.jpg" alt="Pista de uma festa lotada, com o público de braços para cima e jatos de fumaça no palco" loading="lazy" onerror="this.remove()">
+              <span class="px-icon" data-icon="spark" aria-hidden="true"></span>
+            </div>
+            <div class="life-card__body">
+              <span class="chip">SIDE QUEST 02</span>
+              <h3 class="life-card__title">Universidade, festas e histórias</h3>
+              <div class="life-card__desc" id="life-2"><p>Também gosto de sair para algumas festas universitárias, aproveitar a energia do ambiente, conhecer pessoas e criar boas lembranças. Para mim, esses momentos fazem parte da experiência universitária e ajudam a equilibrar a rotina de estudos.</p></div>
+              <button class="life-card__more" type="button" aria-expanded="false" aria-controls="life-2">+ LER MAIS</button>
+            </div>
+          </article>
+
+          <article class="life-card reveal" style="--d:160ms">
+            <div class="life-card__art life-card__art--photo art--c">
+              <img src="assets/img/role-galera.jpg" alt="Selfie de um grupo de amigos sorrindo em uma plataforma de estação de trem à noite" loading="lazy" onerror="this.remove()">
+              <span class="px-icon" data-icon="pin" aria-hidden="true"></span>
+            </div>
+            <div class="life-card__body">
+              <span class="chip">SIDE QUEST 03</span>
+              <h3 class="life-card__title">Rolê com a galera</h3>
+              <div class="life-card__desc" id="life-3"><p>Gosto de sair para passear com meus amigos, conhecer lugares diferentes, conversar e aproveitar os momentos juntos. Nem sempre precisa existir um grande plano: às vezes, os melhores momentos surgem de um passeio simples.</p></div>
+              <button class="life-card__more" type="button" aria-expanded="false" aria-controls="life-3">+ LER MAIS</button>
+            </div>
+          </article>
+
+          <article class="life-card reveal" style="--d:240ms">
+            <div class="life-card__art life-card__art--photo art--d">
+              <img src="assets/img/familia.jpg" alt="Três irmãos sorrindo em frente a uma loja: uma menina em pé e dois meninos agachados" loading="lazy" style="object-position:50% 60%" onerror="this.remove()">
+              <span class="px-icon" data-icon="house" aria-hidden="true"></span>
+            </div>
+            <div class="life-card__body">
+              <span class="chip">SIDE QUEST 04</span>
+              <h3 class="life-card__title">Tempo com a família</h3>
+              <div class="life-card__desc" id="life-4"><p>Estar com minha família também é algo importante para mim. Gosto de aproveitar esses momentos, conversar e compartilhar experiências com as pessoas que fazem parte da minha vida.</p></div>
+              <button class="life-card__more" type="button" aria-expanded="false" aria-controls="life-4">+ LER MAIS</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- PLAYER MODE + HOBBY SELECT -->
+        <div class="player-mode">
+          <header class="player-mode__head reveal">
+            <h3 class="player-mode__title">Player Mode: ON</h3>
+            <p class="player-mode__lead">Os jogos fazem parte dos meus principais hobbies. Gosto tanto de jogos competitivos, que exigem estratégia e raciocínio rápido, quanto de jogos de exploração, construção e experiências independentes que apresentam ideias diferentes.</p>
+          </header>
+
+          <div class="select-grid">
+            <section class="pxwin select-box reveal" aria-labelledby="hobby-select-title">
+              <div class="pxwin__bar">
+                <span id="hobby-select-title">HOBBY SELECT</span>
+                <span class="pxwin__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              </div>
+              <div class="pxwin__body" role="group" aria-label="Escolha um jogo para ver detalhes">
+                <button class="pick" type="button" data-game="valorant" aria-pressed="true" aria-controls="hobby-panel"><span class="px-icon" data-icon="crosshair" aria-hidden="true"></span>VALORANT</button>
+                <button class="pick" type="button" data-game="fortnite" aria-pressed="false" aria-controls="hobby-panel"><span class="px-icon" data-icon="bricks" aria-hidden="true"></span>FORTNITE</button>
+                <button class="pick" type="button" data-game="cs" aria-pressed="false" aria-controls="hobby-panel"><span class="px-icon" data-icon="headset" aria-hidden="true"></span>COUNTER-STRIKE</button>
+                <button class="pick" type="button" data-game="minecraft" aria-pressed="false" aria-controls="hobby-panel"><span class="px-icon" data-icon="cube" aria-hidden="true"></span>MINECRAFT</button>
+                <button class="pick" type="button" data-game="indie" aria-pressed="false" aria-controls="hobby-panel"><span class="px-icon" data-icon="ghost" aria-hidden="true"></span>JOGOS INDIE</button>
+              </div>
+            </section>
+
+            <article class="pxwin hobby-panel reveal" id="hobby-panel" style="--d:120ms">
+              <div class="pxwin__bar">
+                <span>PLAYER_MODE.TXT</span>
+                <span class="pxwin__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              </div>
+              <div class="pxwin__body hobby-panel__body" aria-live="polite">
+                <div class="hobby-panel__top">
+                  <span class="px-icon" id="hobby-icon" data-icon="crosshair" aria-hidden="true"></span>
+                  <div>
+                    <h4 class="hobby-panel__name" id="hobby-name">VALORANT</h4>
+                    <p class="hobby-panel__mode" id="hobby-mode">MODE: COMPETITIVO</p>
+                  </div>
+                </div>
+                <p class="hobby-panel__desc" id="hobby-desc">Estratégia, trabalho em equipe, precisão e partidas competitivas. Também é uma das inspirações da estética deste portfólio.</p>
+                <div class="chip-row" id="hobby-tags">
+                  <span class="chip">ESTRATÉGIA</span><span class="chip">EQUIPE</span><span class="chip">PRECISÃO</span><span class="chip">COMPETITIVO</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <p class="legal reveal">Os nomes dos jogos pertencem aos seus respectivos desenvolvedores e são citados apenas para ilustrar meus gostos pessoais. Os ícones em pixel art são criações originais deste projeto, e o portfólio não tem afiliação com nenhuma dessas empresas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MÚSICA ================= -->
+    <section class="section" id="musica" aria-labelledby="musica-title" tabindex="-1">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-head__tag">SOUNDTRACK OF MY LIFE</p>
+          <h2 class="section-title" id="musica-title">Minha <span class="hl">trilha sonora</span></h2>
+          <p class="section-lead">A música está presente em vários momentos da minha rotina. Gosto de estilos diferentes, desde o trap e o funk até o sertanejo, o pagode e as músicas internacionais. Cada estilo combina com um momento: tem música para sair, relaxar, curtir com os amigos ou simplesmente ouvir enquanto faço outras coisas.</p>
+        </header>
+
+        <div class="reveal">
+          <div class="tabs" role="tablist" aria-label="Estilos musicais">
+            <button class="tab" type="button" role="tab" id="tab-trap" data-tab="trap" aria-selected="true" aria-controls="music-panel"><span class="px-icon" data-icon="mic" aria-hidden="true"></span>Trap</button>
+            <button class="tab" type="button" role="tab" id="tab-sertanejo" data-tab="sertanejo" aria-selected="false" aria-controls="music-panel" tabindex="-1"><span class="px-icon" data-icon="hat" aria-hidden="true"></span>Sertanejo</button>
+            <button class="tab" type="button" role="tab" id="tab-pagode" data-tab="pagode" aria-selected="false" aria-controls="music-panel" tabindex="-1"><span class="px-icon" data-icon="drum" aria-hidden="true"></span>Pagode</button>
+            <button class="tab" type="button" role="tab" id="tab-funk" data-tab="funk" aria-selected="false" aria-controls="music-panel" tabindex="-1"><span class="px-icon" data-icon="speaker" aria-hidden="true"></span>Funk</button>
+            <button class="tab" type="button" role="tab" id="tab-internacionais" data-tab="internacionais" aria-selected="false" aria-controls="music-panel" tabindex="-1"><span class="px-icon" data-icon="globe" aria-hidden="true"></span>Internacionais</button>
+          </div>
+
+          <div class="pxwin">
+            <div class="pxwin__bar">
+              <span id="music-window-title">PLAYLIST.EXE</span>
+              <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            </div>
+            <div class="pxwin__body">
+              <div class="tabpanel" id="music-panel" role="tabpanel" aria-labelledby="tab-trap" tabindex="0">
+                <noscript>Ative o JavaScript para ver os artistas de cada estilo.</noscript>
+              </div>
+
+              <!-- Playlist real: quando tiver o link, troque o "hidden" abaixo por um <iframe> do Spotify
+                   <div class="playlist-slot" id="playlist-slot" hidden></div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIÊNCIA ================= -->
+    <section class="section section--alt" id="experiencia" aria-labelledby="experiencia-title" tabindex="-1">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-head__tag">REAL WORLD EXPERIENCE / TECHNOLOGY</p>
+          <h2 class="section-title" id="experiencia-title">Experiência <span class="hl">profissional</span></h2>
+        </header>
+
+        <div class="xp">
+          <article class="pxwin company reveal" aria-labelledby="empresa-nome">
+            <div class="pxwin__bar">
+              <span>EMPRESA.DAT</span>
+              <span class="pxwin__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            </div>
+            <div class="pxwin__body">
+              <h3 class="company__name" id="empresa-nome">Caixa Seguradora</h3>
+              <div class="chip-row company__area"><span class="chip chip--red">TECNOLOGIA DA INFORMAÇÃO (TI)</span></div>
+              <p>A Caixa Seguradora faz parte do setor de seguros e tem sua história ligada à atuação da Caixa Econômica Federal na distribuição de produtos e serviços financeiros e de proteção. Ao longo de sua trajetória, a operação de seguros vinculada à marca Caixa passou por mudanças societárias e de posicionamento, acompanhando a evolução do mercado brasileiro.</p>
+
+              <ol class="timeline" aria-label="Linha do tempo">
+                <li class="timeline__item is-now">
+                  <p class="timeline__role">AGORA — ÁREA DE TI</p>
+                  <p>Atuação atual na área de Tecnologia da Informação da Caixa Seguradora.</p>
+                </li>
+                <li class="timeline__item">
+                  <p class="timeline__role">EM PARALELO — FIAP</p>
+                  <p>Graduação em Engenharia de Software, relacionando os estudos com situações do mundo real.</p>
+                </li>
+              </ol>
+              <p class="text-muted" style="margin-top:1.2rem;font-size:.85rem">Texto institucional resumido. Este portfólio é pessoal e não representa a posição oficial da empresa.</p>
+            </div>
+          </article>
+
+          <div class="xp__text reveal" style="--d:120ms">
+            <h3>Minha rotina na área de TI</h3>
+            <p>Atualmente, trabalho na Caixa Seguradora, na área de Tecnologia da Informação (TI), e estou gostando muito dessa experiência. É uma oportunidade de conhecer melhor o ambiente corporativo, acompanhar a rotina de uma área tecnológica e aprender com as pessoas que fazem parte da equipe.</p>
+            <p>Uma das coisas que mais gosto no ambiente de trabalho é a forma como sou recebido. O pessoal é muito simpático, me trata bem e torna o dia a dia mais leve. O ambiente é tranquilo, descontraído e também engraçado, o que ajuda a tornar a experiência mais agradável.</p>
+            <p>Essa vivência tem sido importante para meu desenvolvimento pessoal e profissional, principalmente por me permitir conhecer melhor o universo da tecnologia e relacionar meus estudos de Engenharia de Software com situações do mundo real.</p>
+          </div>
+        </div>
+
+        <div class="xp-cards">
+          <article class="xp-card reveal">
+            <p class="xp-card__no">01</p>
+            <h3>Aprendizado contínuo</h3>
+            <p>Conhecer novas rotinas, processos e possibilidades dentro da área de tecnologia.</p>
+          </article>
+          <article class="xp-card reveal" style="--d:100ms">
+            <p class="xp-card__no">02</p>
+            <h3>Ambiente colaborativo</h3>
+            <p>Trabalhar com pessoas simpáticas, receptivas e dispostas a compartilhar experiências.</p>
+          </article>
+          <article class="xp-card reveal" style="--d:200ms">
+            <p class="xp-card__no">03</p>
+            <h3>Desenvolvimento profissional</h3>
+            <p>Construir experiência e ampliar minha visão sobre o mercado de tecnologia.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTATO ================= -->
+    <section class="section contact" id="contato" aria-labelledby="contato-title" tabindex="-1">
+      <div class="container contact__grid">
+        <div class="reveal">
+          <p class="section-head__tag">VAMOS CONVERSAR?</p>
+          <h2 class="section-title" id="contato-title">Curtiu conhecer o <span class="hl">KaytoLabs?</span></h2>
+          <p class="contact__text">Este portfólio representa um pouco de quem sou, dos projetos que desenvolvo e das experiências que fazem parte da minha trajetória. Estou em constante aprendizado e aberto a conhecer novas ideias, trocar experiências e explorar oportunidades na área de tecnologia.</p>
+          <div class="contact__cta">
+            <a class="btn" href="mailto:Kayto.takiuchi2007@gmail.com">ENVIAR E-MAIL</a>
+            <a class="btn btn--ghost" href="tel:+5517997173138">ENTRAR EM CONTATO</a>
+            <a class="btn btn--ghost" href="#inicio">VOLTAR AO TOPO</a>
+          </div>
+        </div>
+
+        <article class="pxwin reveal" style="--d:120ms" aria-label="Dados de contato">
+          <div class="pxwin__bar">
+            <span>MY_CONTACTS.TXT</span>
+            <span class="pxwin__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+          <div class="pxwin__body">
+            <ul class="contact-list">
+              <li><span>NOME</span><strong>Samuel Kayto Takiuchi</strong></li>
+              <li><span>E-MAIL</span><a href="mailto:Kayto.takiuchi2007@gmail.com">Kayto.takiuchi2007@gmail.com</a></li>
+              <li><span>TELEFONE</span><a href="tel:+5517997173138">+55 (17) 99717-3138</a></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">KAYTO<span>LABS</span></p>
+          <p class="footer__by">DESIGNED BY SAMUEL KAYTO TAKIUCHI</p>
+          <p class="footer__phrase">Construindo ideias, explorando tecnologias e transformando criatividade em projetos.</p>
+        </div>
+        <div>
+          <p class="footer__title">CONTATO</p>
+          <ul class="footer__list">
+            <li>Samuel Kayto Takiuchi</li>
+            <li><a href="mailto:Kayto.takiuchi2007@gmail.com">Kayto.takiuchi2007@gmail.com</a></li>
+            <li><a href="tel:+5517997173138">+55 (17) 99717-3138</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__title">FRONT-END PROJECT / FIAP</p>
+          <ul class="footer__list">
+            <li>Disciplina: Front-End | Professora: Cyntia Sayuri</li>
+            <li>Atualizado em <time datetime="2026-10-22">22 de outubro de 2026</time> (22/10/2026)</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer__legal">Interface inspirada na estética de VALORANT. Este portfólio é um projeto acadêmico independente, não é oficial e não possui afiliação com a Riot Games.</p>
+
+      <div class="footer__bottom">
+        <span>© 2026 KAYTOLABS — TODOS OS DIREITOS RESERVADOS.</span>
+        <a class="btn btn--ghost btn--small" href="#inicio">▲ VOLTAR AO TOPO</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" id="to-top" aria-label="Voltar ao topo">▲</button>
+
+  <!-- ================= MODAIS ================= -->
+  <dialog class="modal" id="modal-oceanguard" aria-labelledby="m1-title">
+    <div class="modal__bar">
+      <span>PROJECT_01 / OCEANGUARD</span>
+      <button class="modal__close" type="button" data-modal-close aria-label="Fechar janela">X</button>
+    </div>
+    <div class="modal__body">
+      <div class="chip-row"><span class="chip chip--red">ENVIRONMENTAL TECHNOLOGY</span></div>
+      <h3 class="modal__title" id="m1-title">OceanGuard — Inteligência Ambiental para os Oceanos</h3>
+      <p>O OceanGuard é um projeto voltado ao monitoramento ambiental dos oceanos, com foco na identificação e análise de possíveis manchas de óleo na superfície do mar. A proposta utiliza informações obtidas por satélites, sensores locais e recursos de análise de dados para ajudar a identificar ocorrências que possam representar riscos ao ambiente marinho.</p>
+      <p>A plataforma busca organizar informações ambientais, facilitar a visualização dos dados e contribuir para o acompanhamento de possíveis incidentes. A proposta também considera o envio de relatos, a consulta de informações e o apoio à tomada de decisões por pesquisadores, órgãos públicos e comunidades envolvidas com o ambiente marinho.</p>
+      <h3>OBJETIVOS</h3>
+      <ul class="details__list">
+        <li>Identificação de possíveis manchas de óleo.</li>
+        <li>Monitoramento ambiental.</li>
+        <li>Análise e organização de dados.</li>
+        <li>Integração de diferentes fontes de informação.</li>
+        <li>Apoio à preservação dos oceanos.</li>
+      </ul>
+      <p class="modal__note">Esta janela apresenta a proposta do projeto. A imagem exibida é uma ilustração conceitual, e a precisão da identificação depende de validação técnica.</p>
+      <div class="modal__foot">
+        <!-- Quando tiver o link real, descomente e troque LINK_PROJETO:
+        <a class="btn" href="LINK_PROJETO" target="_blank" rel="noopener">VER REPOSITÓRIO</a> -->
+        <button class="btn btn--ghost" type="button" data-modal-close>FECHAR</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="modal-smartsensecam" aria-labelledby="m2-title">
+    <div class="modal__bar">
+      <span>PROJECT_02 / SMARTSENSECAM</span>
+      <button class="modal__close" type="button" data-modal-close aria-label="Fechar janela">X</button>
+    </div>
+    <div class="modal__body">
+      <div class="chip-row"><span class="chip chip--red">AI / MOBILE EXPERIENCE</span></div>
+      <h3 class="modal__title" id="m2-title">SmartSenseCam — Inteligência Artificial para Fotografia Inteligente</h3>
+      <p>O SmartSenseCam é uma proposta de inteligência artificial integrada à câmera dos celulares da Jovi, desenvolvida para tornar a experiência de fotografar mais simples, intuitiva e inteligente.</p>
+      <p>A ideia é permitir que a câmera analise rapidamente o ambiente e reconheça o tipo de cena que está sendo fotografada, como paisagens, animais e objetos. A partir dessa análise, o sistema poderá ajustar automaticamente parâmetros de captura, como exposição, foco e configurações de imagem, buscando resultados mais adequados para cada situação.</p>
+      <p>O projeto também considera o reconhecimento de ambientes noturnos, permitindo adaptar os ajustes da câmera para melhorar a captura em condições de pouca iluminação. A proposta é reduzir a necessidade de configurações manuais e ajudar o usuário a obter boas fotografias de maneira mais prática.</p>
+      <h3>FUNCIONALIDADES PROPOSTAS</h3>
+      <ul class="details__list">
+        <li>Reconhecimento inteligente de cenas.</li>
+        <li>Identificação de paisagens, animais e objetos.</li>
+        <li>Ajustes automáticos de imagem.</li>
+        <li>Adaptação a ambientes com pouca luz.</li>
+        <li>Experiência de câmera mais simples.</li>
+        <li>Recursos de inteligência artificial integrados à experiência do celular.</li>
+      </ul>
+      <p class="modal__note">O mockup do cartão é uma representação conceitual da proposta, e não o aplicativo real.</p>
+      <div class="modal__foot">
+        <!-- Quando tiver o link real, descomente e troque LINK_PROJETO:
+        <a class="btn" href="LINK_PROJETO" target="_blank" rel="noopener">VER DEMONSTRAÇÃO</a> -->
+        <button class="btn btn--ghost" type="button" data-modal-close>FECHAR</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

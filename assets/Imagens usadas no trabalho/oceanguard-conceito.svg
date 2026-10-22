@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Ilustração conceitual de monitoramento oceânico por satélite">
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16243a"/>
+      <stop offset="1" stop-color="#0c1220"/>
+    </linearGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFC857" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#FFC857" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity=".06"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="400" fill="url(#sea)"/>
+  <rect width="640" height="400" fill="url(#grid)"/>
+  <!-- ondas -->
+  <g fill="none" stroke="#5b7fb0" stroke-opacity=".35" stroke-width="2">
+    <path d="M20 120q20-12 40 0t40 0 40 0 40 0"/>
+    <path d="M300 300q20-12 40 0t40 0 40 0 40 0"/>
+    <path d="M60 330q20-12 40 0t40 0 40 0"/>
+    <path d="M420 90q20-12 40 0t40 0 40 0"/>
+  </g>
+  <!-- costa -->
+  <path d="M0 0H190q-30 50-10 90t-40 80-70 40-70 30V0z" fill="#2b2230" stroke="#FF7138" stroke-opacity=".5" stroke-width="2"/>
+  <!-- mancha ilustrativa -->
+  <g>
+    <path d="M300 200q30-50 90-40t80 50-20 60-90 20-70-30z" fill="#FF4655" fill-opacity=".35" stroke="#FF4655" stroke-width="2"/>
+    <path d="M330 205q20-25 60-18t55 35-15 38-60 10-45-20z" fill="#FF7138" fill-opacity=".35"/>
+    <rect x="285" y="140" width="205" height="150" fill="none" stroke="#FFC857" stroke-width="2" stroke-dasharray="8 6"/>
+    <rect x="285" y="116" width="205" height="24" fill="#FFC857"/>
+    <text x="294" y="133" font-family="monospace" font-size="12" font-weight="700" fill="#101014">POSSÍVEL OCORRÊNCIA (ILUSTRATIVO)</text>
+  </g>
+  <!-- satélite -->
+  <g transform="translate(520 40)">
+    <polygon points="-10,0 -90,230 90,230 10,0" fill="url(#scan)"/>
+    <rect x="-14" y="-14" width="28" height="28" fill="#F4F4F5"/>
+    <rect x="-46" y="-8" width="28" height="16" fill="#FF4655"/>
+    <rect x="18" y="-8" width="28" height="16" fill="#FF4655"/>
+    <rect x="-6" y="-6" width="12" height="12" fill="#101014"/>
+  </g>
+  <!-- sensores -->
+  <g fill="#FFC857">
+    <rect x="230" y="320" width="12" height="12"/>
+    <rect x="520" y="330" width="12" height="12"/>
+    <rect x="130" y="250" width="12" height="12"/>
+  </g>
+  <g fill="none" stroke="#FFC857" stroke-opacity=".6">
+    <circle cx="236" cy="326" r="22"/>
+    <circle cx="526" cy="336" r="22"/>
+    <circle cx="136" cy="256" r="22"/>
+  </g>
+  <!-- painel de dados -->
+  <g transform="translate(24 290)">
+    <rect width="170" height="86" fill="#101014" stroke="#FF4655" stroke-width="2"/>
+    <text x="10" y="18" font-family="monospace" font-size="11" fill="#FFC857">DADOS AMBIENTAIS</text>
+    <rect x="12" y="62" width="16" height="12" fill="#FF7138"/>
+    <rect x="36" y="48" width="16" height="26" fill="#FF4655"/>
+    <rect x="60" y="54" width="16" height="20" fill="#FF7138"/>
+    <rect x="84" y="34" width="16" height="40" fill="#FF4655"/>
+    <rect x="108" y="44" width="16" height="30" fill="#FF7138"/>
+    <rect x="132" y="38" width="16" height="36" fill="#FF4655"/>
+  </g>
+  <!-- aviso -->
+  <rect x="0" y="376" width="640" height="24" fill="#101014"/>
+  <text x="14" y="393" font-family="monospace" font-size="12" font-weight="700" fill="#FFC857">CONCEITO VISUAL — NÃO É CAPTURA DE TELA REAL</text>
+</svg>
